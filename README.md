@@ -1,3 +1,20 @@
+Update from Sean 11/22/13:
+--------------------------
+Looks like I did not need to convert to 32bit as the original `heroku` box is loading fine now.
+
+
+There was a different issue with a bad version of VirtualBox on my 10.5 mac that was preventing
+the vagrant original heroku box from running - which led me to fork this in the first place.
+It kept erroring out with `VERR_NO_MEMORY`. That was solved by upgrading to VirtualBox 4.1.18.
+
+I was not able to test the 32bit version of this after making the config changes. I ran into 
+issues installing the correct ruby version and gems while trying to bundle it. (I was running inside
+another Vagrant box to try and develop the new 32bit heroku version.)
+
+I may come back to this as a personal project to practice on later...
+
+-----
+
 This is a [veewee](https://github.com/jedi4ever/veewee) template for building a
 [Vagrant](http://vagrantup.com/) box that closely mirrors the heroku Cedar stack. You can build it
 yourself by following the directions below or install a prebuilt version from [here](http://dl.dropbox.com/u/1906634/heroku.box).
